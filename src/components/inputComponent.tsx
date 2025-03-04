@@ -18,6 +18,6 @@ interface InputFieldProps extends React.ComponentProps<'input'>{
 
 export function InputField(props: InputFieldProps){
   return (
-        <input {...props} name="number" type="text" inputMode="numeric" className="w-full outline-0 border-0 text-2xl font-semibold text-center"/>
+        <input {...props} name="number" type="number" inputMode="numeric" className="remove-arrow w-full outline-0 border-0 text-2xl font-semibold text-center"/>
   );
 }
