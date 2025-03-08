@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`h-dvh bg-gray-900 p-4 text-gray-200 max-w-[1270px] mx-auto my-1 flex flex-col justify-between items-center space-y-10 ${roboto.variable} antialiased`}
       >
         {children}
-        <footer className="text-center text-md">
+        <footer className="text-center text-md space-y-2">
           <p>
             Feito por <a target="_blank" className="hover:text-gray-500 hover:underline hover:underline-offset-1" href="https://www.github.com/DiegoSousa123">Diego Sousa</a>
           </p>

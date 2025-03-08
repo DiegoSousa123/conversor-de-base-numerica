@@ -3,6 +3,7 @@ import { CopyIcon } from "lucide-react";
 export default function CopyButton({ text }: { text: string }) {
     return (
         <button
+        title="Copiar"
         onClick={() => {
             navigator.clipboard.writeText(text);
         }}
