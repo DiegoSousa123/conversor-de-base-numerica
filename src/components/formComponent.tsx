@@ -1,13 +1,12 @@
 'use client'
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import InputComponent, { InputField } from "./inputComponent";
 import CopyButton from "./copyButton";
 import { Check, Equal, X } from "lucide-react";
 import { convertToDecimal, convertFromDecimal, convertFromHexadecimal, convertToHexadecimal } from "@/utils/convertion";
-import { useContext, useState } from "react";
-import BaseContext from "@/utils/base-context";
+import { useState } from "react";
 import { MainButtonContent, MainButtonIcon, MainButtonRoot } from "./mainButton";
 
 const schema = z.object({
@@ -59,7 +58,7 @@ export default function FormComponent({actionToPerform, placeholder, formTitle}:
     return(
         <>
         <form onSubmit={handleSubmit(submitData)} className="space-y-10 flex flex-col items-center justify-center">
-            <h2 className="text-2xl font-semibold">{formTitle}</h2>
+            <h1 className="text-2xl font-semibold">{formTitle}</h1>
             <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <InputComponent>
                     <InputField {...register('number', {pattern: /[A-Fa-f0-9]ig/})} placeholder={placeholder}/>

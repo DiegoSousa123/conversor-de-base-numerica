@@ -15,13 +15,13 @@ export function convertFromDecimal(number: string, base: number): string{
 }
 
 export function convertFromHexadecimal(number: string): string{
+    const regex = /\b0x/ //detects the 0x prefix
+    let validatedInput = number.replace(regex, ''); //removes the 0x prefix
     const hexLetters = [['A', 10], ['B', 11], ['C', 12], ['D', 13], ['E', 14], ['F', 15]];
-    let auxNumber = number.toUpperCase().split('').reverse();
+    let auxNumber = validatedInput.toUpperCase().split('').reverse();
     for(let [letter, value] of hexLetters){
         let aux = new RegExp(`${letter}`, 'g');
-        if(auxNumber.includes(String(letter))){
-            auxNumber = auxNumber.map((digit) => digit.replace(aux, value.toString()));   
-        }
+        auxNumber = auxNumber.map((digit) => digit.replace(aux, value.toString()));   
     }
     let parsed = auxNumber.map((digit, index) => parseInt(digit) * Math.pow(16, index)).reduce((acc, value) => acc + value, 0);
     return parsed.toString() || '0';

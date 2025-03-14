@@ -1,12 +1,14 @@
 import FormComponent from "@/components/formComponent";
 import * as Tabs from "@radix-ui/react-tabs";
 import { Code2 } from "lucide-react";
+import Image from "next/image";
+import logo from '../../public/conversor-white.png';
 
 export default function Home() {
   return (
     <>
       <header className=" w-full flex justify-between items-center p-4">
-        <h1 className="text-2xl md:text-3xl font-bold">Conversor</h1>
+       <Image className="w-[150px] object-cover" src={logo} alt="Logo" />
         <nav>
           <ul className="flex gap-4">
             <li className="hover:bg-gray-800 p-1.5 rounded">

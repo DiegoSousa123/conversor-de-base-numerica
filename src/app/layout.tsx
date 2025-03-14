@@ -27,7 +27,7 @@ export default function RootLayout({
           <p>
             Feito por <a target="_blank" className="hover:text-gray-500 hover:underline hover:underline-offset-1" href="https://www.github.com/DiegoSousa123">Diego Sousa</a>
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             Este é um projeto criado para fins de estudo de conversão de bases numéricas da matéria de Arquitetura de Computadores, criado por alunos<br></br>
             do Centro Universitário Católica de Quixadá - UniCatólica.
           </p>
