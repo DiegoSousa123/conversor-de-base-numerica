@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const roboto = Roboto({
-  variable: '--font-roboto',
-  subsets: ['latin'],
+  variable: "--font-roboto",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,13 +26,23 @@ export default function RootLayout({
         {children}
         <footer className="text-center text-md space-y-2">
           <p>
-            Feito por <a target="_blank" className="hover:text-gray-500 hover:underline hover:underline-offset-1" href="https://www.github.com/DiegoSousa123">Diego Sousa</a>
+            Feito por{" "}
+            <a
+              target="_blank"
+              className="hover:text-gray-500 hover:underline hover:underline-offset-1"
+              href="https://www.github.com/DiegoSousa123"
+            >
+              Diego Sousa
+            </a>
           </p>
           <p className="text-sm text-gray-400">
-            Este é um projeto criado para fins de estudo de conversão de bases numéricas da matéria de Arquitetura de Computadores, criado por alunos<br></br>
+            Este é um projeto criado para fins de estudo de conversão de bases
+            numéricas da matéria de Arquitetura de Computadores, criado por
+            alunos<br></br>
             do Centro Universitário Católica de Quixadá - UniCatólica.
           </p>
         </footer>
+        <Toaster position="bottom-right"/>
       </body>
     </html>
   );

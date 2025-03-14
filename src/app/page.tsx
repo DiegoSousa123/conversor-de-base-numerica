@@ -11,7 +11,7 @@ export default function Home() {
        <Image className="w-[150px] object-cover" src={logo} alt="Logo" />
         <nav>
           <ul className="flex gap-4">
-            <li className="hover:bg-gray-800 p-1.5 rounded">
+            <li className="hover:bg-gray-950 p-1.5 rounded transition-colors duration-300">
               <a
                 title="Repositório"
                 className="flex justify-center items-center gap-2"
