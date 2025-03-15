@@ -41,5 +41,6 @@ export function convertToHexadecimal(number: string): string{
         let aux = new RegExp(`${value}`, 'g');
         result = result.map((digit) => digit.replace(aux, String(letter)));
     }
-    return result.join('') || '0';
+    const prefix = "0x";
+    return prefix.concat(result.join('') || '0');
 }

@@ -21,7 +21,7 @@ import {
 const schema = z.object({
   number: z
     .string()
-    .min(1, "No mínimo um digito.")
+    .min(1, "No minimo um digito.")
     .regex(/[A-Fa-f0-9]/, "Digite um valor válido."),
 });
 interface FormProps {
@@ -38,9 +38,9 @@ export default function FormComponent({
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
     getValues,
+    setError
   } = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -48,28 +48,41 @@ export default function FormComponent({
     },
   });
 
-  const handleInputChanges = watch("number") || "";
   const [result, setResult] = useState<string>("");
+
+//Function to validate the input entries
+  function validateInputEntries(regex: RegExp, convertionFunction: Function, base?: number) {
+    const value = getValues("number") || "";
+    const reg = regex;
+    if (!reg.test(value)) {
+      setResult(convertionFunction(value, base));
+    }else{
+      setError("number", {
+        type: "manual",
+        message: "Digite um valor válido.",
+    });
+    }
+  }
 
   function submitData() {
     switch (actionToPerform) {
       case 0: //convert from binary to decimal
-        setResult(convertToDecimal(getValues("number") || "", 2));
+        validateInputEntries(/[a-zA-Z2-9]/, convertToDecimal, 2);
         break;
       case 1: //convert from decimal to binary
-        setResult(convertFromDecimal(getValues("number") || "", 2));
+        validateInputEntries(/[a-zA-Z]/, convertFromDecimal, 2);
         break;
       case 2: //convert from octal to decimal
-        setResult(convertToDecimal(getValues("number") || "", 8));
+        validateInputEntries(/[a-zA-Z]/, convertToDecimal, 8);
         break;
       case 3: //convert from decimal to octal
-        setResult(convertFromDecimal(getValues("number") || "", 8));
+        validateInputEntries(/[a-zA-Z]/, convertFromDecimal, 8);
         break;
       case 4: //convert from hexadecimal to decimal
-        setResult(convertFromHexadecimal(getValues("number") || ""));
+        validateInputEntries(/[g-wG-Wy-zY-Z]/, convertFromHexadecimal);
         break;
       case 5: //comvert from decimal to hexadecimal
-        setResult(convertToHexadecimal(getValues("number") || ""));
+        validateInputEntries(/[a-zA-Z]/, convertToHexadecimal);
         break;
     }
   }
