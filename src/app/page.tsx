@@ -1,14 +1,14 @@
 import FormComponent from "@/components/formComponent";
 import * as Tabs from "@radix-ui/react-tabs";
-import { Code2 } from "lucide-react";
+import { Binary, Code2 } from "lucide-react";
 import Image from "next/image";
-import logo from '../../public/conversor-white.png';
+import logo from "../../public/conversor-white.png";
 
 export default function Home() {
   return (
     <>
       <header className=" w-full flex justify-between items-center p-4">
-       <Image className="w-[150px] object-cover" src={logo} alt="Logo" />
+        <Image className="w-[150px] object-cover" src={logo} alt="Logo" />
         <nav>
           <ul className="flex gap-4">
             <li className="hover:bg-gray-950 p-1.5 rounded transition-colors duration-300">
@@ -17,8 +17,21 @@ export default function Home() {
                 className="flex justify-center items-center gap-2"
                 href="https://github.com/DiegoSousa123/conversor-de-base-numerica"
               >
-                <Code2 className="inline align-middle" />{" "}
-                <span className="hidden md:inline">Repository</span>
+                <Code2 className="inline align-middle" />
+                <span className="hidden md:inline">Repositório</span>
+              </a>
+            </li>
+            <li className="hover:bg-gray-950 p-1.5 rounded transition-colors duration-300">
+              <a
+                title="Ver cálculos passo-a-passo"
+                href="https://rafaelpg1.github.io/PRATICAR-A-CONVERSAO-DE-BASES-NUMERICAS/"
+                target="_blank"
+                   className="flex justify-center items-center gap-2"
+              >
+                <Binary className="inline align-middle" />
+                <span className="hidden md:inline">
+                  Conversor passo-a-passo
+                </span>
               </a>
             </li>
           </ul>
