@@ -3,6 +3,18 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --animate-show-error: animate-show-error 0.3s ease-in-out;
+  @keyframes animate-show-error {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 }
 
 .remove-arrow::-webkit-inner-spin-button,

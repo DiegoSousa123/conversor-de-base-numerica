@@ -16,6 +16,6 @@ interface InputFieldProps extends React.ComponentProps<'input'>{}
 
 export function InputField(props: InputFieldProps){
   return (
-        <input {...props} type="text" className={`remove-arrow w-full outline-0 border-0 text-xl font-normal text-start`}/>
+        <input {...props} type="text" className={`remove-arrow w-full outline-0 border-0 text-xl font-normal text-start group-data-[error=true]:text-red-500`}/>
   );
 }

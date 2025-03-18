@@ -21,7 +21,7 @@ export default function CopyButton({ text }: { text: string }) {
 }
 
 //Custom Sonner toast
-function toast(toast: Omit<ToastProps, 'id'>) {
+export function toast(toast: Omit<ToastProps, 'id'>) {
     return sonnerToast.custom((id) => (
       <Toast
         id={id}
