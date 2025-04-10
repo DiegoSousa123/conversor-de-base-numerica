@@ -1,6 +1,6 @@
 import FormComponent from "@/components/formComponent";
 import * as Tabs from "@radix-ui/react-tabs";
-import { Binary, Code2 } from "lucide-react";
+import { ArrowRight, Binary, Code2 } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/conversor-white.png";
 
@@ -47,37 +47,37 @@ export default function Home() {
               value="0"
               className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
             >
-              Binário-Decimal
+              Binário <ArrowRight className="inline align-middle" /> Decimal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="1"
               className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
             >
-              Decimal-Binário
+              Decimal <ArrowRight className="inline align-middle" /> Binário
             </Tabs.Trigger>
             <Tabs.Trigger
               value="2"
               className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
             >
-              Octal-Decimal
+              Octal  <ArrowRight className="inline align-middle" /> Decimal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="3"
               className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
             >
-              Decimal-Octal
+              Decimal <ArrowRight className="inline align-middle" /> Octal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="4"
               className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
             >
-              Hexa-Decimal
+              Hexa <ArrowRight className="inline align-middle" /> Decimal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="5"
               className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
             >
-              Decimal-Hexa
+              Decimal <ArrowRight className="inline align-middle" /> Hexa
             </Tabs.Trigger>
           </Tabs.List>
           <Tabs.Content
