@@ -42,40 +42,40 @@ export default function Home() {
           className="flex flex-col gap-10 justify-center items-center"
           defaultValue="0"
         >
-          <Tabs.List className="flex flex-wrap justify-center items-center gap-4">
+          <Tabs.List className="flex flex-wrap justify-center items-center gap-3 p-2 bg-gray-900/50 rounded-xl border border-gray-800/50 backdrop-blur-sm">
             <Tabs.Trigger
               value="0"
-              className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
+              className="px-4 py-2.5 rounded-lg cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-800/70 hover:scale-105 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 data-[state=active]:border data-[state=active]:border-blue-400/30"
             >
               Binário <ArrowRight className="inline align-middle" /> Decimal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="1"
-              className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
+              className="px-4 py-2.5 rounded-lg cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-800/70 hover:scale-105 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 data-[state=active]:border data-[state=active]:border-blue-400/30"
             >
               Decimal <ArrowRight className="inline align-middle" /> Binário
             </Tabs.Trigger>
             <Tabs.Trigger
               value="2"
-              className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
+              className="px-4 py-2.5 rounded-lg cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-800/70 hover:scale-105 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 data-[state=active]:border data-[state=active]:border-blue-400/30"
             >
               Octal  <ArrowRight className="inline align-middle" /> Decimal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="3"
-              className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
+              className="px-4 py-2.5 rounded-lg cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-800/70 hover:scale-105 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 data-[state=active]:border data-[state=active]:border-blue-400/30"
             >
               Decimal <ArrowRight className="inline align-middle" /> Octal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="4"
-              className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
+              className="px-4 py-2.5 rounded-lg cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-800/70 hover:scale-105 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 data-[state=active]:border data-[state=active]:border-blue-400/30"
             >
               Hexa <ArrowRight className="inline align-middle" /> Decimal
             </Tabs.Trigger>
             <Tabs.Trigger
               value="5"
-              className="p-2 rounded cursor-pointer font-semibold hover:bg-gray-800 data-[state=active]:bg-gray-800"
+              className="px-4 py-2.5 rounded-lg cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-800/70 hover:scale-105 data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-500 data-[state=active]:shadow-lg data-[state=active]:shadow-blue-500/50 data-[state=active]:border data-[state=active]:border-blue-400/30"
             >
               Decimal <ArrowRight className="inline align-middle" /> Hexa
             </Tabs.Trigger>
